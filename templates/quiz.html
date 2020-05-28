@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz - Game Scorer</title>
+    </head>
+    <body style="background-color: #73f094;">
+
+        <form method = "POST">
+            <h2>What is your age?</h2>
+            <p>Knowing this is necessary for us to ensure you only see the BEST games!</p>
+            <p>Please enter your real age: (This is a required field)*</p>
+            <input type="text" id="age" name="age" value="">
+
+            <br>
+
+            <h2>What game genres do you enjoy the most?</h2>
+            <p>Choose one or more: (This is a required field)*</p>
+            <input type="checkbox" id="advent" name="genres" value="Adventure">
+            <label for="advent">Adventure</label>
+            <input type="checkbox" id="arcade" name="genres" value="Arcade">
+            <label for="arcade">Arcade</label>
+            <input type="checkbox" id="fight" name="genres" value="Fighting">
+            <label for="fight">Fighting</label>
+            <input type="checkbox" id="hack" name="genres" value="Hack and slash/Beat 'em up">
+            <label for="hack">Hack and slash/Beat 'em up</label>
+            <input type="checkbox" id="indie" name="genres" value="Indie">
+            <label for="indie">Indie</label>
+            <input type="checkbox" id="moba" name="genres" value="MOBA">
+            <label for="moba">MOBA</label>
+            <input type="checkbox" id="music" name="genres" value="Music">
+            <label for="music">Music</label><br>
+            <input type="checkbox" id="plat" name="genres" value="Platform">
+            <label for="plat">Platform</label>
+            <input type="checkbox" id="point" name="genres" value="Point-and-click">
+            <label for="point">Point-and-click</label>
+            <input type="checkbox" id="puzzle" name="genres" value="Puzzle">
+            <label for="puzzle">Puzzle</label>
+            <input type="checkbox" id="trivia" name="genres" value="Quiz/Trivia">
+            <label for="trivia">Quiz/Trivia</label>
+            <input type="checkbox" id="racing" name="genres" value="Racing">
+            <label for="racing">Racing</label>
+            <input type="checkbox" id="rts" name="genres" value="Real Time Strategy (RTS)">
+            <label for="rts">Real Time Strategy (RTS)</label>
+            <input type="checkbox" id="rpg" name="genres" value="Role-playing (RPG)">
+            <label for="rpg">Role-playing (RPG)</label><br>
+            <input type="checkbox" id="shoot" name="genres" value="Shooter">
+            <label for="shoot">Shooter</label>
+            <input type="checkbox" id="sim" name="genres" value="Simulator">
+            <label for="sim">Simulator</label>
+            <input type="checkbox" id="sport" name="genres" value="Sport">
+            <label for="sport">Sport</label>
+            <input type="checkbox" id="strat" name="genres" value="Strategy">
+            <label for="strat">Strategy</label>
+            <input type="checkbox" id="tactic" name="genres" value="Tactical">
+            <label for="tactic">Tactical</label>
+            <input type="checkbox" id="tbs" name="genres" value="Turn-based strategy (TBS)">
+            <label for="tbs">Turn-based strategy (TBS)</label>
+            <input type="checkbox" id="novel" name="genres" value="Visual Novel">
+            <label for="novel">Visual Novel</label><br>
+
+
+            <br>
+
+            <h2>What game themes do you enjoy the most?</h2>
+            <p>Choose one or more: (This is a required field)*</p>
+            <input type="checkbox" id="4x" name="themes" value="4X (explore, expand, exploit, and exterminate)">
+            <label for="4x">4X (explore, expand, exploit, and exterminate)</label>
+            <input type="checkbox" id="action" name="themes" value="Action">
+            <label for="action">Action</label>
+            <input type="checkbox" id="busi" name="themes" value="Business">
+            <label for="busi">Business</label>
+            <input type="checkbox" id="comedy" name="themes" value="Comedy">
+            <label for="comedy">Comedy</label>
+            <input type="checkbox" id="drama" name="themes" value="Drama">
+            <label for="drama">Drama</label><br>
+            <input type="checkbox" id="educ" name="themes" value="Educational">
+            <label for="educ">Educational</label>
+            <input type="checkbox" id="fanta" name="themes" value="Fantasy">
+            <label for="fanta">Fantasy</label>
+            <input type="checkbox" id="histo" name="themes" value="Historical">
+            <label for="histo">Historical</label>
+            <input type="checkbox" id="horror" name="themes" value="Horror">
+            <label for="horror">Horror</label>
+            <input type="checkbox" id="kids" name="themes" value="Kids">
+            <label for="kids">Kids</label><br>
+            <input type="checkbox" id="myst" name="themes" value="Mystery">
+            <label for="myst">Mystery</label>
+            <input type="checkbox" id="non-fic" name="themes" value="Non-fiction">
+            <label for="non-fic">Non-fiction</label>
+            <input type="checkbox" id="openw" name="themes" value="Open world">
+            <label for="openw">Open world</label>
+            <input type="checkbox" id="party" name="themes" value="Party">
+            <label for="party">Party</label>
+            <input type="checkbox" id="sand" name="themes" value="Sandbox">
+            <label for="sand">Sandbox</label><br>
+            <input type="checkbox" id="scifi" name="themes" value="Science fiction">
+            <label for="scifi">Science fiction</label>
+            <input type="checkbox" id="stealth" name="themes" value="Stealth">
+            <label for="stealth">Stealth</label>
+            <input type="checkbox" id="survi" name="themes" value="Survival">
+            <label for="survi">Survival</label>
+            <input type="checkbox" id="thrill" name="themes" value="Thriller">
+            <label for="thrill">Thriller</label>
+            <input type="checkbox" id="war" name="themes" value="Warfare">
+            <label for="war">Warfare</label><br>
+
+            <br>
+
+            <h2>What game modes do you enjoy the most?</h2>
+            <p>Choose one or more: (This is a required field)*</p>
+            <input type="checkbox" id="coop" name="game_modes" value="Co-operative">
+            <label for="coop">Co-operative</label>
+            <input type="checkbox" id="mmo" name="game_modes" value="Massively Multiplayer Online (MMO)">
+            <label for="mmo">Massively Multiplayer Online (MMO)</label>
+            <input type="checkbox" id="multi" name="game_modes" value="Multiplayer">
+            <label for="multi">Multiplayer</label>
+            <input type="checkbox" id="single" name="game_modes" value="Single player">
+            <label for="single">Single player</label>
+            <input type="checkbox" id="split" name="game_modes" value="Split screen">
+            <label for="split">Split screen</label><br>
+
+            <br>
+
+            <h2>What are your platforms of choice?</h2>
+            <p>Choose one or more: (This is a required field)*</p>
+            <input type="checkbox" id="xbox" name="platforms" value="Xbox">
+            <label for="xbox">Xbox</label>
+            <input type="checkbox" id="ps" name="platforms" value="PlayStation">
+            <label for="ps">PlayStation</label>
+            <input type="checkbox" id="ninten" name="platforms" value="Nintendo consoles">
+            <label for="ninten">Nintendo consoles</label>
+            <input type="checkbox" id="pc" name="platforms" value="PC (Microsoft Windows)">
+            <label for="pc">PC (Microsoft Windows)</label><br>
+            <input type="checkbox" id="linac" name="platforms" value="Linux or Mac">
+            <label for="linac">Linux or Mac</label>
+            <input type="checkbox" id="mobile" name="platforms" value="Mobile">
+            <label for="mobile">Mobile</label>
+            <input type="checkbox" id="other" name="platforms" value="Other (less popular or retro platforms)">
+            <label for="other">Other (less popular or retro platforms)</label><br>
+
+            <br>
+
+            <h2>Finally, what time period would be your favourite in terms of games created?</h2>
+            <p>Write the start year and the end year. (This is NOT a required field.)</p>
+            <input type="text" id="year1" name="year1" value="">
+            <input type="text" id="year2" name="year2" value="">
+            <input type="submit" value="Calculate the games!">
+        </form>
+
+        <br>
+        <p><i>Game Scorer is an independent service and is not associated with any major corporation.</i></p>
+
+    </body>
+</html>

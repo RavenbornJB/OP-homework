@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ game.name }} - Game Scorer</title>
+    </head>
+    <body style="background-color: #73f094;">
+        <h1>{{ game.name }}</h1>
+        <img src="{{game.cover}}" alt="{{game.slug}}"><br><br><br>
+        <b>Genres:</b> {{', '.join(game.genres)}}<br><br>
+        <b>Themes:</b> {{', '.join(game.themes)}}<br><br>
+        <b>Platforms:</b> {{', '.join(game.platforms)}}<br><br>
+        <b>Summary:</b> {{game.summary}}<br><br>
+        <b>Aggregated Critic Rating:</b> {{game.rating|round(1)}}<br><br>
+        <b>Age Rating:</b> {{game.age_floor}}+<br><br><br><br>
+        <p><i>Game Scorer is an independent service and is not associated with any major corporation.</i></p>
+    </body>
+</html>

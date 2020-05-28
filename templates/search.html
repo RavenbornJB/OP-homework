@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Results - Game Scorer</title>
+    </head>
+    <body style="background-color: #73f094;">
+        <h3>Search results for '{{ search_string }}' :</h3>
+
+        {% if search_result != [] %}
+            {%for game in search_result%}
+                <br>
+                <p>
+                {{ loop.index }}) <a href="{{ url_for('game', g=game.slug) }}">{{ game.name }}</a>
+                    <br>
+                </p>
+            {%endfor%}
+        {% else %}
+            <br>
+            Sorry, but we couldn't find any matches for your query.
+            <br>
+        {% endif %}
+        <br>
+        <p><i>Game Scorer is an independent service and is not associated with any major corporation.</i></p>
+    </body>
+</html>

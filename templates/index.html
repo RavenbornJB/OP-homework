@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Main Page - Game Scorer</title>
+    </head>
+    <body style="background-color: #73f094;">
+        <h1>Game Scorer</h1>
+
+        <p><h3>Our service provides the ability to find exactly the type of game you'd like to play!</h3></p>
+        <p>If you'd like to find out for yourself, click the button below to start a questionnaire on your choices in gaming.</p>
+        <a href="{{ url_for("quiz") }}">Quiz</a><br><br>
+        <p>Directly search for a game from our data base: </p>
+        <form method="POST" action="{{ url_for('search') }}">
+            <input type="text" id="search-game" name="search-game">
+            <input type="submit" value="Search">
+        </form>
+        <p><i>Game Scorer is an independent service and is not associated with any major corporation.</i></p>
+    </body>
+</html>
