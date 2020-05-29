@@ -2,19 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/mainpage.css') }}"/>
         <title>Main Page - Game Scorer</title>
     </head>
-    <body style="background-color: #73f094;">
-        <h1>Game Scorer</h1>
+    <body class="body">
+    <div class="container-title">
+    <div class="title-box">
+        <h1 class="title">Game Scorer</h1>
+        <h3>Our service provides the ability to find exactly the type of game you'd like to play!</h3>
+    </div></div>
 
-        <p><h3>Our service provides the ability to find exactly the type of game you'd like to play!</h3></p>
-        <p>If you'd like to find out for yourself, click the button below to start a questionnaire on your choices in gaming.</p>
-        <a href="{{ url_for("quiz") }}">Quiz</a><br><br>
-        <p>Directly search for a game from our data base: </p>
-        <form method="POST" action="{{ url_for('search') }}">
-            <input type="text" id="search-game" name="search-game">
-            <input type="submit" value="Search">
+        <div class="quiz-box">
+        <p class="info">If you'd like to find out for yourself, click the button below to start a questionnaire on your choices in gaming.</p>
+        <form method="GET" action="{{ url_for('quiz') }}" class="quiz-form">
+            <input type="submit" value="Proceed" class="button" id="quiz-button"></form>
+        </div><br><br>
+        <div class="search-box">
+        <p class="info">Directly search for a game from our data base: </p>
+        <form method="POST" action="{{ url_for('search') }}" class="search-form">
+            <label for="search-game" class="search-label"></label>
+            <input type="text" id="search-game" name="search-game" class="search-text" value="Search">
+            <br>
+            <input type="submit" value="Go" class="button" id="search-button">
         </form>
-        <p><i>Game Scorer is an independent service and is not associated with any major corporation.</i></p>
+        </div>
+        <p class="copyright"><i>Game Scorer is an independent service and is not associated with any major corporation.</i></p>
     </body>
 </html>

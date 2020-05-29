@@ -1,19 +1,16 @@
-from flask import Flask, render_template, redirect, request, url_for, session
+from flask import Flask, render_template, redirect, request, url_for
 from scripts.game_adt import GameList
 import json
 
+
 app = Flask(__name__)
-app.config.update(SECRET_KEY= 'my_email_password', TESTING=True)
+app.config.update(SECRET_KEY='my_email_password', SEND_FILE_MAX_AGE_DEFAULT=0)
 with open("data/games.json") as f:
     game_json = json.load(f)
 
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-        search_game = request.form.get("search-game")
-        session['s_game'] = search_game
-        return redirect(url_for("search"))
     return render_template("index.html")
 
 
@@ -27,7 +24,7 @@ def quiz():
         if not age.isdigit():
             return redirect(url_for("wrong_age"))
         else:
-            age = int(age)
+            age = 2020 - int(age)
 
         # Get lists of genres, themes, game_modes, and platforms.
         genres = data.getlist("genres")
